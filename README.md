@@ -13,3 +13,9 @@
 	- sub2.조건문 switch 실습
 	- sub3.반복문 for 실습
 	- sub4.반복문 while 실습
+
+## ch04.java 배열과 메서드
+	- sub1.배열
+	- sub2.메서드
+	- sub3.메서드 타입
+	- sub4.메서드 오버로딩
