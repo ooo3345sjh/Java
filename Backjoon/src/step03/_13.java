@@ -1,43 +1,46 @@
 package step03;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
 
 /*
  * 날짜 : 2022/08/22
  * 이름 : 서정현
- * 내용 : 백준 3단계 12번 : 더하기 사이클
+ * 내용 : 백준 3단계 13번 : 더하기 사이클
  */
-public class _12 {
+public class _13 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 	
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		String num = br.readLine();
-		byte[] n = num.getBytes();
+//		String num = br.readLine();
+		String num = "23";
 		
-		int a, b;
-//		
-//		if(num/10 > 0 ) {
-//			a = num/10;
-//			b = num%10;
-//		} else {
-//			a = 0;
-//			b = num%10;
-//		}
-//		
-//		System.out.println(a+b);
-//		
-//		String sum = null;
-//		
-//		while(true) {
-//				sum = String.valueOf(a+b) + String.valueOf(b);
-//				System.out.println(sum);
-////				if()
-//		}
+		int numInt = Integer.parseInt(num);
+		
+		int intA;
+		int intB;
+		int sum;
+		
+		if(numInt >= 10) {
+			char a = num.charAt(0);
+			char b = num.charAt(1);
+			intA = a - '0';
+			intB = b - '0';
+		} else {
+			char b = num.charAt(0);
+			intA = 0;
+			intB = b -'0';
+		}
+		
+		sum = intA + intB;
+		
+		
+		
+		
+		System.out.println(a + ", " + b);
+		
+		
 	}
 }

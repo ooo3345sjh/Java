@@ -10,17 +10,17 @@ import java.util.StringTokenizer;
 /*
  * 날짜 : 2022/08/22
  * 이름 : 서정현
- * 내용 : 백준 3단계 11번 : A+B - 5
+ * 내용 : 백준 3단계 12번 : A+B - 4
  */
-public class _11 {
+public class _12 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st;
+		String input;
 		
-		
-		while(true) {
-			st = new StringTokenizer(br.readLine());
+		while((input = br.readLine()) != null && !input.isEmpty()) {
+			st = new StringTokenizer(input);
 			int a = Integer.parseInt(st.nextToken());
 			int b = Integer.parseInt(st.nextToken());
 			
