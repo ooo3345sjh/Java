@@ -11,19 +11,18 @@ import java.io.InputStreamReader;
  */
 public class _13 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
-	
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
-//		String num = br.readLine();
-		String num = "23";
-		
+
+		String num = br.readLine();
+
 		int numInt = Integer.parseInt(num);
-		
+
 		int intA;
 		int intB;
 		int sum;
-		
-		if(numInt >= 10) {
+
+		if (numInt >= 10) {
 			char a = num.charAt(0);
 			char b = num.charAt(1);
 			intA = a - '0';
@@ -31,16 +30,26 @@ public class _13 {
 		} else {
 			char b = num.charAt(0);
 			intA = 0;
-			intB = b -'0';
+			intB = b - '0';
 		}
+		int count=0;
 		
-		sum = intA + intB;
-		
-		
-		
-		
-		System.out.println(a + ", " + b);
-		
-		
+		while (true) {
+			count++;
+			
+			sum = intA + intB;
+
+			num = String.valueOf(intB) + String.valueOf(sum%=10);
+			
+			if (Integer.parseInt(num) == numInt) {
+				System.out.println(count);
+				break;
+			}
+			
+			char a = num.charAt(0);
+			char b = num.charAt(1);
+			intA = a - '0';
+			intB = b - '0';
+		}
 	}
 }
