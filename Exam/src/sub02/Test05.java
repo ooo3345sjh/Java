@@ -22,7 +22,8 @@ public class Test05 {
 
 		Scanner sc = new Scanner(System.in);
 		
-		int arr[] = {5, 10, 18, 22, 35, 55, 75, 103, 152};
+//		int arr[] = {5, 10, 18, 22, 35, 55, 75, 103, 152};
+		int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		
 		System.out.print("검색할 값 입력 : ");
 		int value = sc.nextInt();
