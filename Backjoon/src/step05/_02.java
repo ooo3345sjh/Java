@@ -1,9 +1,5 @@
 package step05;
 
-import java.util.Iterator;
-import java.util.Set;
-import java.util.TreeSet;
-
 /*
  * 날짜 : 2022/08/27
  * 이름 : 서정현
