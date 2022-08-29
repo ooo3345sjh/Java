@@ -1,19 +1,19 @@
 package ch06;
 
 /*
- * 날짜 : 2022/08/26
+ * 날짜 : 2022/08/29
  * 이름 : 서정현
- * 내용 : 학번 자동으로 부여하기 / 학번 확인하기
+ * 내용 : serialNum의 get(), set() 메서드 사용하기 / 학번 출력하기
  */
 
-class Student1{
-	public static int serialNum = 1000; //static변수는 인스턴스 생성과 상관없이 먼저 생성됨
+class Student2{
+	private static int serialNum = 1000; //private 변수로 변경
 	public int studentId;
 	public String studentName;
 	public int grade;
 	public String address;
 	
-	public Student1() {
+	public Student2() {
 		serialNum++;  			//학생이 생성될 때마다 증가
 		studentId = serialNum;	//증가된 값을 학번 인스턴스 변수에 부여
 	}
@@ -25,19 +25,27 @@ class Student1{
 	public void setStudentName(String studentName) {
 		this.studentName = studentName;
 	}
+
+	public static int getSerialNum() {
+		return serialNum;
+	}
+
+	public static void setSerialNum(int serialNum) {
+		Student2.serialNum = serialNum;
+	}
 	
 }
 
-public class P184 {
+public class P187 {
 	public static void main(String[] args) {
-		Student1 studentLee = new Student1();
+		Student2 studentLee = new Student2();
 		studentLee.setStudentName("이지원");
-		System.out.println(studentLee.serialNum);
+		System.out.println(Student2.getSerialNum());
 		System.out.println(studentLee.studentName + " 학번:" + studentLee.studentId);
 		
-		Student1 studentSon = new Student1();
+		Student2 studentSon = new Student2();
 		studentSon.setStudentName("손수경");
-		System.out.println(studentSon.serialNum); 
+		System.out.println(Student2.getSerialNum()); 
 		System.out.println(studentSon.studentName + " 학번:" + studentSon.studentId);
 	}
 }
