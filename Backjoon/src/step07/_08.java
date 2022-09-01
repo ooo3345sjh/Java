@@ -18,6 +18,7 @@ public class _08 {
 		
 		int length = 0;
 		int[] sum;
+		
 		if(tmpA.length <= tmpB.length) {
 			length = tmpB.length;
 			sum = new int[tmpB.length];
@@ -28,24 +29,7 @@ public class _08 {
 		
 		int[] arrA = intArr(tmpA, length);
 		int[] arrB = intArr(tmpB, length);
-		
-//		for(int i=length - tmpA.length, j=0; i<length; i++, j++) {
-//			if(j<tmpA.length) {
-//				arrA[i] = tmpA[j] - '0';
-//			} else {
-//				arrA[i] = 1;
-//			}
-//		}
-//		
-//		for(int i=length - tmpB.length, j=0; i<length; i++, j++) {
-//			if(j<tmpB.length) {
-//				arrB[i] = tmpB[j] - '0';
-//			} else {
-//				arrB[i] = 0;
-//			}
-//		}
-		
-		
+			
 		int ascendNum  = 0;
 		for(int i=length-1; i>=0; i--) {
 			
