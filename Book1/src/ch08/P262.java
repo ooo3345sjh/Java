@@ -1,5 +1,7 @@
 package ch08;
 
+import java.util.ArrayList;
+
 /*
  * 날짜 : 2022/09/01
  * 이름 : 서정현
@@ -8,7 +10,7 @@ package ch08;
  * 	- 고객관리 프로그램 완성하기(2)
  * 	- 고객관리 프로그램 완성하기(3)
  * 	- 새로운 등급 고객 추가하기
- * 
+ *  - 배열을 활용한 고객 관리 프로그램 구현하기
  */
 class Customer1 {
 	protected int customerID;
@@ -135,6 +137,35 @@ public class P262 {
 		System.out.println(customerKim.getCustomerName() + "님이 " + kimPrice + "원 지불하셨습니다.");
 		System.out.println(customerKim.showCustomerInfo());
 		
+		
+		System.out.println("============================================================================");
+		
+		ArrayList<Customer1> customerList = new ArrayList<>();
+		
+		Customer1 customerLee1 = new Customer1(10010, "이순신");
+		Customer1 customerShin = new Customer1(10020, "신사임당");
+		Customer1 customerHong = new GoldCustomer(10030, "홍길동");
+		Customer1 customerYoul = new GoldCustomer(10040, "이율곡");
+		Customer1 customerKim1 = new VIPCustomer1(10050, " 김유신", 12345);
+		
+		customerList.add(customerLee1);
+		customerList.add(customerShin);
+		customerList.add(customerHong);
+		customerList.add(customerYoul);
+		customerList.add(customerKim1);
+		
+		System.out.println("====== 고객 정보 출력 =======");
+		for(Customer1 customer : customerList) {
+			System.out.println(customer.showCustomerInfo());
+		}
+		
+		System.out.println("====== 할인율과 보너스 포인트 계산 ====== ");
+		int price1 = 10000;
+		for(Customer1 customer : customerList) {
+			int cost = customer.calcPrice(price1);
+			System.out.println(customer.getCustomerName() + " 님이 " + cost + "원 지불하셨습니다.");
+			System.out.println(customer.getCustomerName() + " 님의 현재 보너스 포인트는 " + customer.bonusPoint + "점입니다.");
+		}
 		
 		
 		
