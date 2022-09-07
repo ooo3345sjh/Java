@@ -1,0 +1,44 @@
+package test;
+
+/*
+ * 날짜 : 2022/09/07
+ * 이름 : 서정현
+ * 내용 : 재귀함수를 이용한 별 출력
+ */
+public class test05 {
+	
+	static String blackStar = "★";
+	static String WhiteStar = "";
+
+	public static void main(String[] args) {
+		
+		int num = 8;
+		f(num);
+		
+	}
+	
+	public static void f(int num) {
+		
+		if(num == 0) {
+			return;
+		}
+		
+		WhiteStar = "";
+		for(int i = 1; i < num; i++ ) {
+			WhiteStar += "☆";
+		}
+		
+		System.out.print(WhiteStar);
+		System.out.print(blackStar);
+		System.out.println(WhiteStar);
+		
+		blackStar += "★★";
+		
+		if(!(WhiteStar.length() == 0)) {
+			WhiteStar = WhiteStar.substring(1);
+		}
+		
+		f(--num);
+	}
+
+}

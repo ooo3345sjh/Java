@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\java2\Desktop\수행평가\프로그래밍 언어 활용\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+4057593902.index
+1657330681.index
