@@ -31,7 +31,7 @@ public class MathTest {
 		System.out.println("num3 : " + num3); //1 ~ 10 사이에 실수
 		
 		// 1 ~ 45 사이 정수
-		int rand = (int)Math.ceil(Math.random() * 10);
+		int rand = (int)Math.ceil(Math.random() * 45);
 		System.out.println("rand : " + rand);
 	}
 }
