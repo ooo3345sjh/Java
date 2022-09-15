@@ -22,6 +22,6 @@ class Student2{
 	}
 }
 
-public class P141 {
+public class P141_P142 {
 	
 }

@@ -54,7 +54,7 @@ class MyNoteBook extends NoteBook {
 	}
 }
 
-public class P283 {
+public class P283_P289 {
 	public static void main(String[] args) {
 	//추상클래스는 객체생성이 불가능
 	//	Computer c1 = new Computer();  

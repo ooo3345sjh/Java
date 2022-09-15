@@ -54,7 +54,7 @@ class BookShelf extends Shelf implements Queue {
 	
 }
 
-public class P340 {
+public class P340_P342 {
 	public static void main(String[] args) throws IOException {
 		
 		Queue shelfQueue = new BookShelf();

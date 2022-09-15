@@ -23,7 +23,7 @@ class Book {
 	}
 }
 
-public class P354 {
+public class P354_P356 {
 	
 	public static void main(String[] args) {
 		Book book1 = new Book(200, "개미");

@@ -6,7 +6,7 @@ package ch04;
  * 내용 : break문 예제
  */
 
-public class P120 {
+public class P121 {
 	public static void main(String[] args) {
 		int sum = 0;
 		int num = 0;

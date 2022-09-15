@@ -24,7 +24,7 @@ class Student6{
 	}
 }
 
-public class P162 {
+public class P162_P165 {
 	public static void main(String[] args) {
 		Student6 studentLee = new Student6();
 		//studentLee.studentName; // studentName 변수가 private으로 선언되어 오류 발생

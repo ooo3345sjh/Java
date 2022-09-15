@@ -112,7 +112,7 @@ class GoldCustomer extends Customer1 {
 	}
 }
 
-public class P262 {
+public class P262_P268 {
 	public static void main(String[] args) {
 		
 		Customer1 customerLee = new Customer1();

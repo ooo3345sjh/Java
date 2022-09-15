@@ -14,6 +14,8 @@ package ch08;
  *  - 하위 클래스 생성하기
  *  - Customer 클래스에 새로운 생성자 추가하
  *  - 명시적으로 상위 클래스 생성자 호출하기
+ *  - calcPrice() 메서드 재정의하기
+ *  - calcPrice() 테스트하기
  *  - 클래스 형 변환과 재정의 메서드 호출하기
  *  - 클래스형에 기반하여 지불 금액 계산하기
  */
@@ -103,7 +105,7 @@ class VIPCustomer extends Customer {
 	}
 }
 
-public class P234 {
+public class P234_P258 {
 	public static void main(String[] args) {
 		
 		Customer customerLee = new Customer(10010, "이순신");

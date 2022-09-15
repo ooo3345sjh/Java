@@ -19,7 +19,7 @@ class Company{
 	}
 }
 
-public class P194 {
+public class P194_P195 {
 	public static void main(String[] args) {
 		
 		//클래스 이름을 getInstance() 호출하여 참조 변수에 대입

@@ -120,7 +120,7 @@ class SuperLevel extends PlayerLevel {
 	
 }
 
-public class P298 {
+public class P298_P303 {
 	public static void main(String[] args) {
 		
 		Player player = new Player();

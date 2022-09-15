@@ -66,7 +66,7 @@ class PriorityAllocation implements Scheduler {
 }
 
 
-public class P322 {
+public class P322_P324 {
 	public static void main(String[] args) throws IOException {
 		System.out.println("전화 상감 할당 방식을 선택하세요");
 		System.out.println("R : 한명씩 차례로 할당");

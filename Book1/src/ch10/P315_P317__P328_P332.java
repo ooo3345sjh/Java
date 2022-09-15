@@ -9,6 +9,7 @@ package ch10;
  * 	- 계산기 클래스 만들기
  * 	- CompleteCalc 클래스 실행하기
  * 	- Calc 인터페이스에 디폴트 메서드 구현하기
+ * 	- 디폴트 메서드 호출하기
  * 	- 정적 메서드 구현하기
  * 	- 정적 메서드 호출하기
  * 	- Calc 인터페이스에 private 메서드 구현하기
@@ -86,7 +87,7 @@ class CompleteCalc extends Calculator{
 	
 }
 
-public class P315 {
+public class P315_P317__P328_P332 {
 	public static void main(String[] args) {
 		int num1 = 10;
 		int num2 = 5;

@@ -82,7 +82,7 @@ class Subway{
 	
 }
 
-public class P175 {
+public class P175_P178 {
 	public static void main(String[] args) {
 		Customer customerJames = new Customer("James", 5000);
 		Customer customerTomas = new Customer("Tomas", 10000);

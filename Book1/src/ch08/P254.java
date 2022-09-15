@@ -13,7 +13,7 @@ class TestA {
 	}
 }
 
-public class P255 {
+public class P254 {
 	public static void main(String[] args) {
 		
 		TestA a1 = new TestA();
