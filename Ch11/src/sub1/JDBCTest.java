@@ -1,7 +1,6 @@
 package sub1;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.*;
 
 /*
  * 날짜 : 2022/09/14
@@ -32,6 +31,8 @@ public class JDBCTest {
 			} else {
 				System.out.println("데이터베이스 접속 실패!");
 			}
+			
+			Statement stmt = conn.createStatement();
 			
 		} catch (Exception e) {
 			e.printStackTrace();
