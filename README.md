@@ -65,10 +65,7 @@
 	- sub4.JDBC PreparedStatement 실습하기
 	- sub5.트랜잭션 실습하기 
 
-## java 연습문제
-	- sub01.java 연습문제1
-	- sub01.java 연습문제2
-	- sub01.java 연습문제3
+# [java 연습문제](https://github.com/ooo3345sjh/Java/tree/main/Exam/src)
 	
 # [Backjoon 알고리즘 문제](https://github.com/ooo3345sjh/Java/tree/main/Backjoon/src)
 
