@@ -58,7 +58,7 @@
 	- sub3.직렬화 / 역직렬화 실습하기 
 	- sub4.프로퍼티 실습하기 
 
-## ch10. JDBC 프로그래밍
+## ch11. JDBC 프로그래밍
 	- sub1.JDBC 실습하기
 	- sub2.JDBC Delete / Insert / Update 실습하기
 	- sub3.JDBC Select 실습하기
