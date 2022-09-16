@@ -13,7 +13,7 @@ public class AbstractTest {
 	public static void main(String[] args) {
 		
 		//추상클래스 객체 생성할 수 없음
-		//Car sonata = new Car("소나타", "흰샌", 0);
+		//Car sonata = new Car("소나타", "흰색", 0);
 		
 		Car sonata = new Sedan("소나타", "흰색", 0);
 		sonata.speedUp(100);
