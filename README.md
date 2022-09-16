@@ -53,7 +53,17 @@
 	- sub5.자료구조 Map 실습하기 
 
 ## ch10. java 입출력 스트림
-	- sub1.파일 입출력 스트림 실습하기
+	- sub1.파일 입출력 스트림 / 문자 스트림 실습하기
+	- sub2.버퍼 입출력 스트림 실습하기
+	- sub3.직렬화 / 역직렬화 실습하기 
+	- sub4.프로퍼티 실습하기 
+
+## ch10. JDBC 프로그래밍
+	- sub1.JDBC 실습하기
+	- sub2.JDBC Delete / Insert / Update 실습하기
+	- sub3.JDBC Select 실습하기
+	- sub4.JDBC PreparedStatement 실습하기
+	- sub5.트랜잭션 실습하기 
 
 ## java 연습문제
 	- sub01.java 연습문제1
