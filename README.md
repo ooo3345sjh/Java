@@ -64,6 +64,12 @@
 	- sub3.JDBC Select 실습하기
 	- sub4.JDBC PreparedStatement 실습하기
 	- sub5.트랜잭션 실습하기 
+	
+## ch12. JDBC 스레드
+	- sub1. 스레드 실습하기
+	- sub2. 스레드 Join 및 동기화 실습하기
+	- sub3. 스레드 활용 실습하기
+	- sub4. 데몬스레드 실습하기
 
 # [java 연습문제](https://github.com/ooo3345sjh/Java/tree/main/Exam/src)
 	
