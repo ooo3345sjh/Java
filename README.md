@@ -70,6 +70,11 @@
 	- sub2. 스레드 Join 및 동기화 실습하기
 	- sub3. 스레드 활용 실습하기
 	- sub4. 데몬스레드 실습하기
+	
+## ch13. 람다식과 스트림
+	- sub1. 람다식 실습하기 / 람다식을 활용한 스레드 실습하기
+	- sub2. 컬렉션 스트림 실습하기
+	- sub3. 필터 스트림 실습하기 / 맵스트림 실습하기
 
 # [java 연습문제](https://github.com/ooo3345sjh/Java/tree/main/Exam/src)
 	
