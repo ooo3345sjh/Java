@@ -3,11 +3,13 @@ package ch12;
 /*
  * 날짜 : 2022/09/19
  * 이름 : 서정현
- * 내용 : P392_P394
- * 	- Powder 클래스 정의하기(P392)
- * 	- Plastic 클래스 정의하기(P393)
- * 	- GenericPrinter<T> 클래스 정의하기(P393)
- * 	- GenericPrinter<T> 클래스 사용하기(P394)
+ * 내용 : P396_P399
+ * 	- Material 추상 클래스(P396)
+ * 	- Powder 클래스(P396)
+ * 	- Plastic 클래스(P396)
+ * 	- GenericPrinter<T extends> 클래스(P397)
+ * 	- <T extends 클래스> 클래스 사용하기(P398)
+ * 	- <T extends 클래스> 테스트하기(P399)
  */
 abstract class Material {
 	public abstract void doPrinting();
@@ -56,26 +58,29 @@ class GenericPrinter1<T extends Material>{
 	public String toString() {
 		return material.toString();
 	}
+	
+	public void printing() {
+		material.doPrinting();
+	}
 }
 
 public class P396_P399 {
 
 	public static void main(String[] args) {
 		
-		GenericPrinter1<Material> powderPrinter1 = new GenericPrinter1<>();
-		powderPrinter1.setMaterial(new Powder1());
-		
 		GenericPrinter1<Powder1> powderPrinter = new GenericPrinter1<>();
-		
 		powderPrinter.setMaterial(new Powder1());
-		Powder1 powder = powderPrinter.getMaterial();
-		System.out.println(powderPrinter);
+		powderPrinter.printing();
 		
 		GenericPrinter1<Plastic1> plasticPrinter = new GenericPrinter1<>();
-		
 		plasticPrinter.setMaterial(new Plastic1());
-		Plastic1 plastic = plasticPrinter.getMaterial();
-		System.out.println(plasticPrinter);
+		plasticPrinter.printing();
+	
+//		세라믹(Ceramics)은 Material의 자식 클래스가 아니기 때문에 GenericPrinter의 자료형이 될 수 없다.
+		
+//		GenericPrinter1<Ceramics> ceramicsPrinter = new GenericPrinter1<>();
+//		plasticPrinter.setMaterial(new Ceramics());
+//		plasticPrinter.printing();
 	}
 	
 }
