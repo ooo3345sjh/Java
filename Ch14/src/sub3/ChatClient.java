@@ -33,5 +33,4 @@ public class ChatClient {
 			e.printStackTrace();
 		}
 	}
-	
 }

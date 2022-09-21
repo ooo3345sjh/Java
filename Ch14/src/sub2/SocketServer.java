@@ -7,7 +7,7 @@ import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class SocketSercer {
+public class SocketServer {
 	
 	public static void main(String[] args) {
 		
