@@ -77,10 +77,22 @@ public class P407_P412 {
 	
 	public static void main(String[] args) {
 		MemberArrayList memberArrayList = new MemberArrayList();
-		member memberLee = new Member(1001, "이지원");
-		member memberLee = new Member(1001, "손민국");
-		member memberLee = new Member(1001, "박서원");
-		member memberLee = new Member(1001, "홍길동");
+		Member memberLee = new Member(1001, "이지원");
+		Member memberSon = new Member(1002, "손민국");
+		Member memberPark = new Member(1003, "박서원");
+		Member memberHong = new Member(1004, "홍길동");
+		
+		memberArrayList.addMember(memberLee);
+		memberArrayList.addMember(memberSon);
+		memberArrayList.addMember(memberPark);
+		memberArrayList.addMember(memberHong);
+		
+		memberArrayList.showAllMember();
+		
+		memberArrayList.removeMember(memberHong.getMemberId());
+		memberArrayList.showAllMember();
+		
+		
 	}
 
 }
