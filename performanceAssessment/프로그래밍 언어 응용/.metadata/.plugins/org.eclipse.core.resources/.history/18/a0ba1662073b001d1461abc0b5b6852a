@@ -1,0 +1,10 @@
+package test;
+
+public class User {
+	
+	private String uid;
+	private String name;
+	private String hp;
+	private String age;
+
+}

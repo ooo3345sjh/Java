@@ -1,0 +1,170 @@
+package test;
+
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.List;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+
+public class Main extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txtId;
+	private JTextField txtName;
+	private JTextField txtHp;
+	private JTextField txtAge;
+	private JTextField txtSearch;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Main frame = new Main();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Main() {
+		setTitle("회원관리매니저 v1.0");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 539, 558);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+	
+		JButton btnEnd = new JButton("종료");
+		btnEnd.setFont(new Font("굴림", Font.BOLD, 16));
+		btnEnd.setBounds(361, 53, 103, 27);
+		contentPane.add(btnEnd);
+		
+		JTextArea txtMain = new JTextArea();
+		txtMain.setBounds(12, 136, 503, 362);
+		contentPane.add(txtMain);
+		
+		JButton btnInsert = new JButton("입력");
+		btnInsert.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				txtMain.setText("");
+				User user = new User();
+				
+				String uid = txtId.getText();
+				String name = txtName.getText();
+				String hp = txtHp.getText();
+				int age = Integer.parseInt(txtAge.getText());
+				
+				user.setUid(uid);
+				user.setName(name);
+				user.setHp(hp);
+				user.setAge(age);
+				
+				UserDao.getInstance().insertUser(user);
+				
+				txtMain.append("입력완료\n");
+				
+				txtId.setText("");
+				txtName.setText("");
+				txtHp.setText("");
+				txtAge.setText("");
+			}
+		});
+		
+		btnInsert.setFont(new Font("굴림", Font.BOLD, 16));
+		btnInsert.setBounds(127, 53, 103, 27);
+		contentPane.add(btnInsert);
+		
+		JButton btnInquiry = new JButton("조회");
+		btnInquiry.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				txtMain.setText("");
+				
+				List<User> user = UserDao.getInstance().selectUsers();
+				
+				for(User u : user) {
+					txtMain.setText("");
+				}
+				
+			}
+		});
+		btnInquiry.setFont(new Font("굴림", Font.BOLD, 16));
+		btnInquiry.setBounds(12, 50, 103, 32);
+		contentPane.add(btnInquiry);
+		
+		JButton btnSearch = new JButton("검색");
+		btnSearch.setFont(new Font("굴림", Font.BOLD, 16));
+		btnSearch.setBounds(12, 92, 103, 32);
+		contentPane.add(btnSearch);
+		
+		JButton btnDelete = new JButton("삭제");
+		btnDelete.setFont(new Font("굴림", Font.BOLD, 16));
+		btnDelete.setBounds(246, 53, 103, 27);
+		contentPane.add(btnDelete);
+		
+		
+		
+		txtId = new JTextField();
+		txtId.setBounds(41, 22, 57, 21);
+		contentPane.add(txtId);
+		txtId.setColumns(10);
+		
+		JLabel lblID = new JLabel("ID : ");
+		lblID.setFont(new Font("굴림", Font.BOLD, 12));
+		lblID.setBounds(12, 25, 57, 15);
+		contentPane.add(lblID);
+		
+		txtName = new JTextField();
+		txtName.setColumns(10);
+		txtName.setBounds(139, 22, 57, 21);
+		contentPane.add(txtName);
+		
+		JLabel lblName = new JLabel("이름 : ");
+		lblName.setFont(new Font("굴림", Font.BOLD, 12));
+		lblName.setBounds(110, 25, 57, 15);
+		contentPane.add(lblName);
+		
+		txtHp = new JTextField();
+		txtHp.setColumns(10);
+		txtHp.setBounds(237, 22, 171, 21);
+		contentPane.add(txtHp);
+		
+		JLabel lblHp = new JLabel("HP : ");
+		lblHp.setFont(new Font("굴림", Font.BOLD, 12));
+		lblHp.setBounds(208, 25, 57, 15);
+		contentPane.add(lblHp);
+		
+		JLabel lblAge = new JLabel("나이 : ");
+		lblAge.setFont(new Font("굴림", Font.BOLD, 12));
+		lblAge.setBounds(420, 25, 57, 15);
+		contentPane.add(lblAge);
+		
+		txtAge = new JTextField();
+		txtAge.setColumns(10);
+		txtAge.setBounds(458, 22, 57, 21);
+		contentPane.add(txtAge);
+		
+		txtSearch = new JTextField();
+		txtSearch.setColumns(10);
+		txtSearch.setBounds(127, 92, 171, 32);
+		contentPane.add(txtSearch);
+	}
+}

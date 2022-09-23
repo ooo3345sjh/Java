@@ -1,0 +1,85 @@
+package test;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Main extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txt;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Main frame = new Main();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Main() {
+		setTitle("회원관리매니저 v1.0");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 621, 421);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		txt = new JTextField();
+		txt.setToolTipText("dsfdsfsd");
+		txt.setEditable(false);
+		txt.setBounds(127, 10, 466, 355);
+		contentPane.add(txt);
+		txt.setColumns(10);
+		
+		JButton btnEnd = new JButton("종료");
+		btnEnd.setFont(new Font("굴림", Font.BOLD, 16));
+		btnEnd.setBounds(12, 302, 103, 63);
+		contentPane.add(btnEnd);
+		
+		JButton btnInput = new JButton("입력");
+		btnInput.setFont(new Font("굴림", Font.BOLD, 16));
+		btnInput.setBounds(12, 155, 103, 63);
+		contentPane.add(btnInput);
+		
+		JButton btnInquiry = new JButton("조회");
+		btnInquiry.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		btnInquiry.setFont(new Font("굴림", Font.BOLD, 16));
+		btnInquiry.setBounds(12, 10, 103, 63);
+		contentPane.add(btnInquiry);
+		
+		JButton btnSearch = new JButton("검색");
+		btnSearch.setFont(new Font("굴림", Font.BOLD, 16));
+		btnSearch.setBounds(12, 83, 103, 63);
+		contentPane.add(btnSearch);
+		
+		JButton btnDelete = new JButton("삭제");
+		btnDelete.setFont(new Font("굴림", Font.BOLD, 16));
+		btnDelete.setBounds(12, 229, 103, 63);
+		contentPane.add(btnDelete);
+	}
+}
