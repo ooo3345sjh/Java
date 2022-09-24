@@ -1,6 +1,7 @@
 package ch12;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /*
  * 날짜 : 2022/09/20
@@ -12,8 +13,8 @@ import java.util.ArrayList;
  */
 class Member {
 	private int memberId;
-	private String memberName; 
-	
+	private String memberName;
+
 	public Member(int memberId, String memberName) {
 		this.memberId = memberId;
 		this.memberName = memberName;
@@ -34,7 +35,21 @@ class Member {
 	public void setMemberName(String memberName) {
 		this.memberName = memberName;
 	}
-	
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(memberId);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if(!(obj instanceof Member)) return false;
+		
+		Member member = (Member)obj;
+		
+		return member.memberId == this.memberId;
+	}
+
 	@Override
 	public String toString() {
 		return memberName + "회원님의 아이디는 " + memberId + "입니다";
@@ -43,20 +58,20 @@ class Member {
 
 class MemberArrayList {
 	private ArrayList<Member> arrayList;
-	
+
 	public MemberArrayList() {
 		arrayList = new ArrayList<Member>();
 	}
-	
+
 	public void addMember(Member member) {
 		arrayList.add(member);
 	}
-	
+
 	public boolean removeMember(int memberId) {
-		for(int i=0; i<arrayList.size(); i++) {
+		for (int i = 0; i < arrayList.size(); i++) {
 			Member member = arrayList.get(i);
 			int tempId = member.getMemberId();
-			if(tempId == memberId) {
+			if (tempId == memberId) {
 				arrayList.remove(i);
 				return true;
 			}
@@ -64,9 +79,9 @@ class MemberArrayList {
 		System.out.println(memberId + "가 존재하지 않습니다");
 		return false;
 	}
-	
+
 	public void showAllMember() {
-		for(Member member : arrayList) {
+		for (Member member : arrayList) {
 			System.out.println(member);
 		}
 		System.out.println();
@@ -74,25 +89,24 @@ class MemberArrayList {
 }
 
 public class P407_P412 {
-	
+
 	public static void main(String[] args) {
 		MemberArrayList memberArrayList = new MemberArrayList();
 		Member memberLee = new Member(1001, "이지원");
 		Member memberSon = new Member(1002, "손민국");
 		Member memberPark = new Member(1003, "박서원");
 		Member memberHong = new Member(1004, "홍길동");
-		
+
 		memberArrayList.addMember(memberLee);
 		memberArrayList.addMember(memberSon);
 		memberArrayList.addMember(memberPark);
 		memberArrayList.addMember(memberHong);
-		
+
 		memberArrayList.showAllMember();
-		
+
 		memberArrayList.removeMember(memberHong.getMemberId());
 		memberArrayList.showAllMember();
-		
-		
+
 	}
 
 }

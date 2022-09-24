@@ -15,9 +15,9 @@ public class JDBCTest {
 	public static void main(String[] args) {
 		
 		// DB정보
-		String host = "jdbc:mysql://127.0.0.1:3306/java2db";
+		String host = "jdbc:mysql://127.0.0.1:3306/java2_bank";
 		String user = "root";
-		String pass = "1234";
+		String pass = "940520";
 		
 		try {
 			// 1단계 - JDBC 드라이버 로드
