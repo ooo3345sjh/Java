@@ -345,10 +345,10 @@ public class MyCalculator extends JFrame {
 				if(result == ERROR_NUM) return; //result 값이 오류 번호이면 return한다.
 				
 				String formatResult = "";
-				result = Double.parseDouble(String.format("%.2f", result)); //소수 둘째자리까지 표현 
+				result = Double.parseDouble(String.format("%.1f", result)); //소수 첫째자리까지 표현 
 				
 				if(String.valueOf(result).length() > 8) { //결과값의 길이(소수점 포함)가 8이상일 경우 지수표현식을 사용
-					DecimalFormat df = new DecimalFormat("#.#E0");
+					DecimalFormat df = new DecimalFormat("#.###E0");
 					formatResult = df.format(result);
 				} else {
 					formatResult = String.valueOf(result);					
