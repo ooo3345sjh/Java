@@ -348,11 +348,7 @@ public class MyCalculator extends JFrame {
 				result = Double.parseDouble(String.format("%.1f", result)); //소수 첫째자리까지 표현 
 				
 				if(String.valueOf(result).length() > 8) { //결과값의 길이(소수점 포함)가 8이상일 경우 지수표현식을 사용
-<<<<<<< HEAD
 					DecimalFormat df = new DecimalFormat("#.####E0");
-=======
-					DecimalFormat df = new DecimalFormat("#.###E0");
->>>>>>> ead59beaad613861f99c7867ae1f254cd1c983c3
 					formatResult = df.format(result);
 				} else {
 					formatResult = String.valueOf(result);					
