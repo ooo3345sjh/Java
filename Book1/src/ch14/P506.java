@@ -3,7 +3,9 @@ package ch14;
 /*
  * 날짜 : 2022/09/27
  * 이름 : 서정현
- * 내용 : 사용자 정의 예외 구현하기
+ * 내용 : P506_P507
+ * 	- 사용자 정의 예외 구현하기
+ * 	- 사용자 정의 예외 테스트하기
  */
 class IDFormatException extends Exception {
 	public IDFormatException(String message) {
