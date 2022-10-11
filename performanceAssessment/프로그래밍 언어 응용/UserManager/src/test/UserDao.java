@@ -23,7 +23,7 @@ public class UserDao {
 	private String pass = "1234";
 	
 	private Connection getConnection() throws ClassNotFoundException, SQLException {
-		Class.forName("com.mysql.cj.jdbc.Driver");
+		Class.forName("com.mysql.cj.jdbc.Driver"); //생략가능
 		Connection conn = DriverManager.getConnection(host, user, pass);
 		return conn;
 	}
